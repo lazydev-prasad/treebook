@@ -7,8 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                                                                      data-target="#top-navbar"
+                                                                      aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><!-- end of .button -->
+                <a class="navbar-brand" href="#">Treebook</a>
+            </div><!-- end of .navbar-header -->
+            <div class="collapse navbar-collapse" id="top-navbar">
+                <ul class="nav navbar-nav">
+                    <li><%= link_to "All Statuses", statuses_path %></li>
+                </ul>
+            </div><!-- end of .collapse #top-navbar -->
+        </div><!-- end of .container-fluid -->
+    </div><!-- end of .navbar -->
+    <div class="container">
+        <%= yield %>
+    </div><!-- end of .container -->
 </body>
 </html>
